@@ -32,69 +32,59 @@ const IslandSnowLogo = () => (
 );
 
 const MiddleMenu = () => (
-    <div className="row justify-content-center pt-4">
-      <div className="col-1">
-        <div className="dropdown">
-          <div className="dropdown-toggle">
-            <strong>MEN</strong>
-          </div>
-        </div>
-      </div>
-      <div className="col-1">
-        <div className="dropdown">
-          <div className="dropdown-toggle">
-            <strong>WOMEN</strong>
-          </div>
-        </div>
-      </div>
-      <div className="col-1">
-        <div className="dropdown">
-          <div className="dropdown-toggle">
-            <strong>KIDS</strong>
-          </div>
-        </div>
-      </div>
-      <div className="col-1">
-        <div className="dropdown">
-          <div className="dropdown-toggle">
-            <strong>BRANDS</strong>
-          </div>
-        </div>
-      </div>
-      <div className="col-1">
-        <strong>SEARCH</strong>
-      </div>
-    </div>
+  <Navbar expand="lg">
+    <Container className="justify-content-center pt-4">
+      <Nav className="justify-content-end">
+        <NavDropdown title="MEN" className="px-3">
+          <NavDropdown.Item></NavDropdown.Item>
+          <NavDropdown.ItemText>Your cart is currently empty.</NavDropdown.ItemText>
+        </NavDropdown>
+        <NavDropdown title="WOMEN" className="px-3">
+          <NavDropdown.Item></NavDropdown.Item>
+          <NavDropdown.ItemText>Your cart is currently empty.</NavDropdown.ItemText>
+        </NavDropdown>
+        <NavDropdown title="KIDS" className="px-3">
+          <NavDropdown.Item></NavDropdown.Item>
+          <NavDropdown.ItemText>Your cart is currently empty.</NavDropdown.ItemText>
+        </NavDropdown>
+        <NavDropdown title="BRANDS" className="px-3">
+          <NavDropdown.Item></NavDropdown.Item>
+          <NavDropdown.ItemText>Your cart is currently empty.</NavDropdown.ItemText>
+        </NavDropdown>
+        <Nav.Link className="px-3">SEARCH</Nav.Link>
+      </Nav>
+    </Container>
+  </Navbar>
 );
 
 const FullWidthImage = () => (
-  <div className="row justify-content-center pt-3">
-    <img src="https://courses.ics.hawaii.edu/ics314s23/morea/ui-frameworks/experience-islandsnow-bootstrap-main.png" className="img-fluid"/>
+  <div className="row justify-content-center">
+    <img src="https://courses.ics.hawaii.edu/ics314s23/morea/ui-frameworks/experience-islandsnow-bootstrap-main.png" className="img-fluid" alt="Island Snow"/>
   </div>
 );
 
 const FooterMenu = () => (
   <footer>
   <div className="container">
-    <div className="row pt-3\\">
+    <div className="row pt-3">
       <div className="col">
         NAVIGATION
         <hr/>
-        <div>About Us</div>
-        <div>Employment</div>
-        <div>Videos</div>
+        <Nav.Link className="pb-2">About Us</Nav.Link>
+        <Nav.Link className="pb-2">Employment</Nav.Link>
+        <Nav.Link className="pb-2">Videos</Nav.Link>
       </div>
       <div className="col">
         MAIN MENU
         <hr/>
-        <div>Men</div>
-        <div>Women</div>
-        <div>Kids</div>
+        <Nav.Link className="pb-2">Men</Nav.Link>
+        <Nav.Link className="pb-2">Women</Nav.Link>
+        <Nav.Link className="pb-2">Kids</Nav.Link>
       </div>
       <div className="col">
         CONNECT
         <hr/>
-        <div>Sign up for latest updates</div>
+        <div className="pb-2">Sign up for latest updates</div>
         <input type="text" placeholder="Enter Email Address"/>
         <div className="btn btn-dark">Join</div>
       </div>
